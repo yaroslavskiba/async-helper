@@ -1,0 +1,28 @@
+{
+  "name": "async-helper",
+  "version": "1.0.0",
+  "description": "Async Helper Lib",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "jest"
+  },
+  "author": "YaroslavSkiba",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.11.7"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.6.0",
+    "jest": "^27.4.5",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
