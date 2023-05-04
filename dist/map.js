@@ -1,8 +1,14 @@
 "use strict";
 const map = (items, fn) => {
-    return Promise.all(items.map(fn)).catch((err) => {
-        throw new Error(`Oops, something wrong! 
-      ${err}`);
+    if (items.length === 0) {
+        return Promise.resolve([]);
+    }
+    return Promise.all(items.map(fn))
+        .then((results) => {
+        return results;
+    })
+        .catch((err) => {
+        throw new Error(`Oops, something went wrong! ${err}`);
     });
 };
 module.exports = {

@@ -28,11 +28,19 @@
 // map should handle a mix of resolved and rejected promises
 // Проверяет, что функция map может обрабатывать массив, содержащий как разрешенные, так и отклоненные промисы.
 
-const { map } = require('../dist/delay');
+const { map } = require('../dist/map');
 
 describe('map function', () => {
-  test('map should return an empty array when given an empty array', () => {});
-  test('map should return an array of the same length as the input array', () => {});
+  test('map should return an empty array when given an empty array', async () => {
+    const result = await map([]);
+    expect(result).toEqual([]);
+  });
+
+  test('map should return an array of the same length as the input array', async () => {
+    const result = await map(['one', 'two', 'three'], (e) => console.log(e));
+    expect(result.length === ['one', 'two', 'three'].length);
+  });
+
   test('map should apply the function to each item in the input array', () => {});
   test('map should return an array of the same type as the output of the function', () => {});
   test('map should return an array of promises', () => {});
