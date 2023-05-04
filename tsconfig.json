@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "outFile": "./dist/async-helper.js",
+    "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
   },
   "include": [
-    "src/**/*"
+    "./src/**/*"
   ],
   "exclude": [
     "node_modules",

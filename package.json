@@ -4,7 +4,7 @@
   "description": "Async Helper Lib",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "ts-node",
     "build": "tsc",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write \"src/**/*.ts\"",
@@ -16,6 +16,7 @@
     "@types/node": "^16.11.7"
   },
   "devDependencies": {
+    "@types/jest": "^27.5.2",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "eslint": "^8.6.0",

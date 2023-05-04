@@ -4,3 +4,7 @@ const map = <T, U>(items: T[], fn: (item: T) => Promise<U>): Promise<U[]> => {
       ${err}`);
   });
 };
+
+module.exports = {
+  map,
+};

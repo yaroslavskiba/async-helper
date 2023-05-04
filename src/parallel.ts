@@ -4,3 +4,7 @@ const parallel = <T>(tasks: (() => Promise<T>)[]): Promise<T[]> => {
       ${err}`);
   });
 };
+
+module.exports = {
+  parallel,
+};
